@@ -16,10 +16,11 @@
 
   .info_box {
     background-color: #36454F;
-    width: 60%;
+    width: 550px;
     margin: auto;
     border-radius: 5px;
     border: 1px solid lightgray;
+    display: none;
   }
 
   .info_box .info_title {
@@ -35,7 +36,7 @@
     padding: 5px 5px;
   }
 
-  .start_btn, .info_box {
+  .start_btn, .info_box, .quiz_box {
     position:absolute;
     top: 50%;
     left:50%;
@@ -46,16 +47,74 @@
     color: white;
   }
 
+  .quiz_box {
+    background: #36454F;
+    width: 550px;
+    margin: auto;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    color: white;
+    display: block;
+  }
+
+  .quiz_box header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgrey;
+    padding: 0 30px;
+    font-size: 20px;
+  }
+  
+  .quiz_box header .question_counter {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    background: grey;
+  }
+
+  .quiz_box header .question_counter span p {
+    display: inline-block;
+    padding: 5px;
+    font-size: 15px;
+    margin: 0px;  
+  }
+
+  .quiz_box section {
+    padding: 10px 30px;
+  }
+
+  .quiz_box section .que_text {
+    font-size: 20px; 
+  }
+
+  .quiz_box section .option {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid lightgray;
+    background-color: grey;
+    border-radius: 5px;
+  }
+
+  .quiz_box footer {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-top: 1px solid lightgrey;
+    padding: 0 30px;
+  }
+
+
   /* Start Quiz Button Styling */
 
-  .start_btn button {
+  .quiz_box .start_btn button {
     font-size: 1.5rem;
     padding: .8rem 1.2rem;
     border-radius: 5px;
     background-color: #FFE81F;
     font-family: Poller One;
     border: none;
-    outline: none;
     cursor: pointer;
   }
 
@@ -92,3 +151,24 @@
   .buttons button.quit:hover {
     background: #dbc500;
   }  
+
+/* Next question button */
+
+  .quiz_box footer button {
+    background-color: #FFE81F;
+    font-family: Poller One;
+    height: 30px;
+    width: 90px;
+    padding: 5px;
+    margin: 0 5px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #FFE81F;
+    font-size: 14px;
+    cursor: pointer;
+    transform: all 0.3s ease;
+  }
+
+  .quiz_box footer button.next_btn:hover {
+    background: #dbc500;
+  }
