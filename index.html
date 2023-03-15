@@ -9,31 +9,45 @@
     <script src="script.js"></script>    
 </head>
 <body>
-    
+<!-- Start button -->
+
     <div class="start_btn"><button>Start Quiz</button></div>
+
 <!-- Start info box -->
+
     <div class="info_box">
         <div class="info_title">
-            <h4>Rules of this Quiz</h6>
+            <h4>Rules of this quiz...</h6>
+            <img src="Darth_Vader.png">
         </div>
         <ol class="info_list">
             <li class="info">You can select only one answer per question.</li>
             <li class="info">Once you select your answer, you can't reselect.</li>
-            <li class="info">You can't exit from the Quiz while you're playing.</li>
+            <li class="info">You can't exit from the quiz while you're playing.</li>
         </ol>
         <div class="buttons">
             <button class="quit">Exit Quiz</button>
             <button class="restart">Continue</button>
         </div>
     </div>
+
 <!-- Quiz box -->
+
+    <!-- Quiz box HEADER -->
+
     <div class="quiz_box">
         <header>
-            <div class="title">Star Wars Fan Quiz</div>
-            <div class="question_counter">
-                    <span><p>2</p><p>Of</p><p>5</p></span>
+            <div class="title">Star Wars Fan quiz</div>
+            <div class="question_counter_container">
+                <span>question</span>
+                <div class="question_counter">
+                        <span><p>2</p><p>of</p><p>5</p></span>
+                </div>
             </div>
         </header>
+
+    <!-- Quiz box MAIN SECTION -->
+
         <section>
             <div class="que_text">
                 <h5>Who was the master of Darth Sidious (Emperor Palpatine)?</h5>
@@ -57,13 +71,18 @@
                 </div>
             </div>
         </section>
-<!--  Quiz box footer  -->
+
+    <!--  Quiz box FOOTER  -->
+
         <footer>
             <button class="next_btn">Next</button>
         </footer>
     </div>
 
-
+<!-- Result box  -->
+    <div class="result_box">
+        <div class="icon"></div>
+    </div>
 
     
 </body>
