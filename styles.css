@@ -28,6 +28,7 @@
 
   h5 {
     font-size: 22px;
+    margin: 15px;
   }
 
   .start_btn, .info_box, .quiz_box, .result_box {
@@ -113,7 +114,7 @@
   
   .quiz_box header .question_counter_container {
     background-color: lightgray;
-    width: 30%;
+    width: 33%;
     height: 40px;
     display: flex;
     justify-content: space-between;
@@ -126,6 +127,7 @@
 
   .quiz_box header .question_counter {
     color: black;
+    width: 53%;
     border-radius: 5px;
     background: #FFE81F;
     height: 80%;
@@ -135,7 +137,7 @@
   }
 
   .quiz_box header .question_counter span p {
-    display: inline-block;
+    display: inline;
     padding: 0 5px;
     font-size: 15px;
   }
@@ -162,6 +164,10 @@
   }
 
   .quiz_box section .option:hover {
+    background-color: #5e5e5e;
+  }
+
+  .quiz_box section .option.selected {
     background-color: #5e5e5e;
   }
 
