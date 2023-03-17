@@ -171,6 +171,10 @@
     background-color: #5e5e5e;
   }
 
+  .quiz_box section .option.disabled {
+    pointer-events: none;
+  }
+
   .quiz_box footer {
     height: 70px;
     display: flex;

@@ -7,6 +7,7 @@ const info_box = document.querySelector(".info_box");
 const quit_btn = info_box.querySelector(".buttons .quit");
 const continue_btn = info_box.querySelector(".buttons .restart");
 const quiz_box = document.querySelector(".quiz_box");
+const option_list = document.querySelector(".option_list");
 
 // If Start Quiz button clicked
 
@@ -51,7 +52,6 @@ next_btn.onclick = function() {
 
 function showQuestions(index) {
     const que_text = document.querySelector(".que_text");
-    const option_list = document.querySelector(".option_list");
     let que_tag = '<h5>' + questions[index].numb + '. ' + questions[index].question + '</h5>';
     let option_tag = '<div class="option">' + questions[index].options[0] + '<span></span></div>'
                      + '<div class="option">' + questions[index].options[1] + '<span></span></div>'
@@ -59,21 +59,33 @@ function showQuestions(index) {
                      + '<div class="option">' + questions[index].options[3] + '<span></span></div>';
     que_text.innerHTML = que_tag;
     option_list.innerHTML = option_tag;
-    const option = option_list.querySelector(".option");
+    const option = option_list.querySelectorAll(".option");
     for (let i = 0; i < option.length; i++) {
-        option[i].setAttribute("onclick", "optionSelected(this)")
+        option[i].setAttribute("onclick", "optionSelected(this)");
     }
 }
+
+let tickIcon = '<div class="icon tick"><i class="fa fa-check"></i></div>';
+let crossIcon = '<div class="icon cross"><i class="fa fa-times"></i></div>';
 
 function optionSelected(answer) {
     let userAns = answer.textContent;
     let correctAns = questions[que_count].answer;
+    let allOptions = option_list.children.length;
     if(userAns === correctAns) {
         answer.classList.add("selected");
         console.log("Answer is correct");
+        answer.insertAdjacentHTML("beforeend", tickIcon);
     } else {
         answer.classList.add("selected");
-        console,log("Answer is wrong");
+        console.log("Answer is wrong");
+        answer.insertAdjacentHTML("beforeend", crossIcon);
+    }
+
+// Once user selected disable all options
+
+    for (let i = 0; i < allOptions; i++) {
+        option_list.children[i].classList.add("disabled");
     }
 }
 
